@@ -1,0 +1,60 @@
+		<div style="background: #eee;" ng-controller="destinationCtry">
+			<!--地图-->
+			<div class="des_map">
+				<img src="images/map.jpg" class="des_img1"/>
+				<div class="des_map_asi des-t" ng-class="desClass('亚洲')" ng-click="desClick('亚洲')">
+					<p>亚洲</p>
+					<div class="des_tri" ng-class="desClass1('亚洲')"></div>
+				</div>
+				<div class="des_map_eur des-t" ng-class="desClass('欧洲')" ng-click="desClick('欧洲')">
+					<p>欧洲</p>
+					<div class="des_tri" ng-class="desClass1('欧洲')"></div>
+				</div>
+				<div class="des_map_afi des-t" ng-class="desClass('非洲')" ng-click="desClick('非洲')">
+					<p>非洲</p>
+					<div class="des_tri" ng-class="desClass1('非洲')"></div>
+				</div>
+				<div class="des_map_nth des-3" ng-class="desClass('北美洲')" ng-click="desClick('北美洲')">
+					<p>北美洲</p>
+					<div class="des_tri des_l" ng-class="desClass1('北美洲')"></div>
+				</div>
+				<div class="des_map_ant des-3" ng-class="desClass('南极洲')" ng-click="desClick('南极洲')">
+					<p>南极洲</p>
+					<div class="des_tri des_l" ng-class="desClass1('南极洲')"></div>
+				</div>
+				<div class="des_map_sou des-3" ng-class="desClass('南美洲')" ng-click="desClick('南美洲')">
+					<p>南美洲</p>
+					<div class="des_tri des_l" ng-class="desClass1('南美洲')"></div>
+				</div>
+				<div class="des_map_aus des-3" ng-class="desClass('大洋洲')" ng-click="desClick('大洋洲')">
+					<p>大洋洲</p>
+					<div class="des_tri des_l" ng-class="desClass1('大洋洲')"></div>
+				</div>
+			</div>
+			<!--end map-->
+			<div class="des_wrap">
+				<p class="des_addr">{{cnname}}热门目的地</p>
+				<ul class="des_listpic">
+					<li ng-repeat="datades in desData | destinFilter:cnname:'hot_country':'cnname'">
+						<img ng-src="{{datades.photo}}" class="des_img2"/>
+						<div class="des_r">
+							<p class="des_p1">{{datades.count}}</p>
+							<p class="des_p2">{{datades.label}}</p>
+						</div>
+						<div class="des_le">
+							<p class="des_p3">{{datades.cnname}}</p>
+							<p class="des_p4">{{datades.enname}}</p>
+						</div>
+					</li>
+				</ul>
+				<p class="des_addr">{{cnname}}其他目的地</p>
+				<ul class="des_countrylist">
+					<li ng-repeat="datades in desData | destinFilter:cnname:'country'">
+						<p>{{datades.cnname}}</p>
+						<p>{{datades.enname}}</p>
+					</li>
+				</ul>
+			</div>
+			<!--空div与底部的空隙-->
+			<div style="width: 100%;height:5rem;"></div>
+		</div>

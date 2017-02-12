@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/*轮播*/
+.swiper-first{
+	height: 5rem;
+	width: 100%;
+}
+/*去过更多*/
+.home_h3{
+	height: 1.2rem;
+	font-size: 0.5rem;
+	line-height: 1.2rem;
+	color:#aaa;
+	border-bottom: 1px solid #ccc;
+}
+.home_h3 img{
+	height:0.5rem;
+	vertical-align: middle;
+	margin-left: 0.3rem;
+}
+.home_h3 p{
+	display: inline-block;
+	vertical-align: middle;
+}
+/*历史浏览*/
+.home_bgimg{
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+.home_bgimg .bgimg{
+	width: 100%;
+	height: 100%;
+}
+.home_visit{
+	display: block;
+	position: relative;
+	width: 95%;
+	margin: 0.3rem auto;
+	height: 3rem;
+}
+.home_visit div{
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	text-align: center;
+	color: #fff;
+}
+.home_visit p:nth-child(1){
+	font-size: 0.3rem;
+	line-height: 1rem;
+}
+.home_visit p:nth-child(2){
+	font-size:1.2rem;
+	line-height: 2rem;
+}
+/*home导航*/
+.home_nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom:0.5rem ;
+}
+.home_nav a{
+	display: block;
+	width: 20%;
+	font-size: 0.3rem;
+	text-align: center;
+}
+.home_nav li img{
+	width: 60%;
+}
+.rel{
+	position: absolute;
+	bottom:-0.15rem;
+	left:4.2rem;
+	font-size:0.3rem ;
+	padding: 0 0.2rem;
+	background: #fff;
+	color: #ccc;
+}
+/*内容*/
+.home_city{
+	margin-top: 0.3rem;
+	margin-bottom: 3rem;
+}
+/*更多城市*/
+.home_span span{
+	width: 30%;
+	line-height: 1rem;
+	border: 1px solid #39C88F;
+	color: #39C88F;
+	font-size: 0.4rem;
+	text-align: center;
+	border-radius: 0.5rem;
+}
+/*现在出发*/
+.home_go img{
+	height: 1rem;
+	display: block;
+	margin: 0 auto;
+}
+.home_go p{
+	color: #39C88F;
+	font-size: 0.3rem;
+	text-align: center;
+}
+/*main内容*/
+.citys a{
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	margin-top: 0.3rem;
+}
+.citys img{
+	width: 100%;
+	height: 5rem;
+}
+.citys h4{
+	color:#000;
+	font-size:0.4rem;
+	text-align: center;
+	line-height: 0.5rem;
+}
+.citys p{
+	color:#aaa;
+	font-size: 0.3rem;
+	margin: 0.5rem 0.2rem;
+}

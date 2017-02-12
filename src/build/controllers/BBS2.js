@@ -1,0 +1,1 @@
+define(["app"],function(n){return n.controller("BBS2Ctry",["$scope","$http","baseUrl",function(n,t,e){t.get(e+"bbsEnter").then(function(t){n.bbsEnter=t.data.data.forum_list,n.bbsEntername=t.data.data.forum_list[0].name}),n.bbsEnterClick=function(t){n.bbsEntername=t},n.bbsEnternavClass=function(t){return n.bbsEntername==t?"navclick":""}}])});

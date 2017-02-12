@@ -1,0 +1,1 @@
+define(["app"],function(a){return a.controller("mallCtrl",["$scope",function(a,n){for(var o=[],r=0;r<10;r++)o.push({img:"../images/jijiutaocan.jpg",word:"机票套餐"});a.mallData=o}])});

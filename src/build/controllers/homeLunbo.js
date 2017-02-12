@@ -1,0 +1,1 @@
+define(["app","swiper"],function(e){return e.controller("homeLunbo",["$scope","$timeout",function(e,i){e.imgsrc=["images/img0.jpg","images/img1.jpg","images/img2.jpg","images/img3.jpg","images/img4.jpg"],e.swiper=new Swiper(".swiper-first",{paginationClickable:!0,spaceBetween:30,centeredSlides:!0,autoplay:2500,autoplayDisableOnInteraction:!1,loop:!0,observer:!0})}])});

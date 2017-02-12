@@ -1,0 +1,264 @@
+@charset "UTF-8";
+#mine{
+    @-webkit-keyframes widthc{
+        from{width: 25%;height: 25%;}
+        50%{width: 50%;height: 50%;}
+        to{width: 100%;height: 100%;}
+    }
+    @-webkit-keyframes widthh{
+        from{width: 75%;height: 75%;}
+        50%{width: 50%;height: 50%;}
+        to{width: 0;height: 0%;}
+    }
+    /*浮层*/
+    .mine-all{
+        background: rgba(0,0,0,0.5);
+        z-index: 10;    
+        position: fixed;
+        
+        /*display: none;*/
+    }
+    .mine-show{
+        width: 100%;
+        height: 100%;    
+        animation: widthc 0.3s linear;
+    }
+    .mine-hide{
+        width: 0;
+        height: 0;   
+        overflow: hidden;
+        animation: widthh 0.3s linear;
+    }
+    .mine-change{
+        background: #fff;
+        width:5rem;
+        padding-left: 0.5rem;
+        height: 2.5rem;
+        vertical-align: middle;
+        margin: 4rem 2.5rem;
+    }
+    .mine-change_p{
+        font-size: 0.35rem;
+        line-height: 1.25rem;
+        color: #636161;
+        
+    }
+    /*头部*/
+    .mine-head{
+        width: 100%;
+        height: 3.8rem;
+        position: relative;
+        background: url(../images/bg.jpg);
+        background-size: 100% 100%;
+    }
+    /*登陆用户*/
+    .mine-user{
+        width: 5rem;
+        height: 1.35rem;
+        position: absolute;
+        bottom: 0.8rem;
+        left: 0.5rem;
+        
+    }
+    .mine-img{
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        float: left;
+        border:0.1rem solid #eee;
+    }
+    .mine-user_p{
+        color:white;
+        display: inline-block;
+      margin-left: 0.2rem;
+      margin-bottom: 0;
+      float: left;
+        font-size: 0.38rem;
+        
+    }
+    /*bell跳转*/
+    .mine-a{
+         position: absolute;
+         top: 0.5rem;
+        right: 0.5rem;
+        color: white;
+    }
+    /*bootstrap*/
+    .glyphicon {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .aaa:before {
+         content: "\e123";
+    }
+    .glyphicon-cog:before {
+        content: "\e019";
+    }
+    .glyphicon-star:before {
+        content: "\e006";
+    }
+    .glyphicon-envelope:before {
+        content: "\2709";
+    }
+    .glyphicon-map-marker:before {
+        content: "\e062";
+    }
+    .glyphicon-list-alt:before {
+        content: "\e032";
+    }
+    .glyphicon-tag:before {
+        content: "\e041";
+    }
+    .glyphicon-bookmark:before {
+        content: "\e044";
+    }
+    .glyphicon-heart-empty:before {
+        content: "\e143";
+    }
+    .glyphicon-flag:before {
+        content: "\e034";
+    }
+    .glyphicon-pushpin:before {
+        content: "\e146";
+    }
+    .glyphicon-edit:before {
+        content: "\e065";
+    }
+    .glyphicon-search:before {
+        content: "\e003";
+    }
+    .glyphicon-user:before {
+        content: "\e008";
+    }
+    .glyphicon-arrow-left:before {
+        content: "\e091";
+    }
+    /*收藏帖子*/
+    .mine-nav{
+        width: 100%;
+        height: 1.6rem;
+        background: #fff;
+        font-size: 0;
+    }
+    .mine-nav_a{
+        width: 33.33%;
+        height: 1.6rem;
+        display: inline-block;
+        text-align: center;
+        float: left;  
+        /*border: 1px solid salmon;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       flex-wrap: wrap;
+    }
+    .fontt{
+        text-align: center; 
+        font-size: 0.4rem;
+        display: block;   
+      width: 100%;
+      color:#58D2A1;
+    }
+    
+    /*中间列表*/
+    #mine-ul{
+        width: 95%;
+      margin: 0 auto;
+      list-style: none;
+      font-size: 0.35rem;
+    }
+    #mine-ul .mine-list{
+        display: list-item;
+        text-align: -webkit-match-parent;
+        width: 100%;
+        height: 1.3rem;
+        background: #fff;
+       line-height: 1.3rem;
+       display: flex;
+        /*border: 1px solid salmon;*/
+        border-bottom: 1px solid lightgray;
+    }
+    .mine-ul_span {
+        color:#727272; line-height: 1.3rem;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 0.5rem;
+        /*border: 1px solid salmon;*/
+    }
+    .mine-list:nth-child(3n+1) {
+        margin-top: 0.5rem;
+    }
+    
+    /*bell点击铃铛跳转的页面*/
+    /*头部消息*/
+    #bell_header {
+      width: 100%;
+      height: 1.35rem;
+      background: #11BF79;
+      color: white;
+    }
+    .bell_a_color{
+        color: white;
+    }
+    #bell_header span{
+         font-size: 0.6rem;
+        line-height: 1.35rem;
+        margin-left: 0.5rem;
+    }
+    /*通知私信*/
+    #bell_nav {
+      width: 100%;
+      height: 1rem;
+      position: relative;
+      background: lightgray;
+    }
+    .bell_nav {
+      width: 50%;
+      font-size: 0.35rem;
+      height: 1rem;
+      float: left;
+      text-align: center;
+      line-height: 1rem;
+    }
+    /*通知的下划线*/
+    #bell_line {
+      width: 50%;
+      height: 0.15rem;
+      background: #11BF79;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    /*中间灰色有图片部分*/
+    #bell_cont>div {
+      width: 100%;
+      position: absolute;
+      top: 2.35rem;
+      bottom: 0;
+    }
+    
+    #bell_cont1 {
+        left: 0;
+        background: #EEEEEE;
+    }
+    #bell_cont img {
+        display: block;
+        width: 2.5rem;
+        margin: 0 auto;
+        text-align: center; 
+    }
+    .none{
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+}

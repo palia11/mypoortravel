@@ -1,0 +1,168 @@
+@charset "UTF-8";
+.des_map{
+	font-size: 0.25rem;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+.des_map .des_img1{
+	width: 100%;
+}
+/*两个字的公共样式*/
+.des-t{
+	width: 0.7rem;
+	height:0.62rem;
+	background: #fff;
+	position: absolute;
+	border-radius: 0.1rem;
+	line-height: 0.62rem;
+	text-align: center;
+}
+/*小三角的公共样式*/
+.des_tri{
+	width: 0;
+	height: 0;
+	border:0.1rem solid #fff;
+	border-bottom: 0.1rem solid rgba(0,0,0,0);
+	border-left: 0.1rem solid rgba(0,0,0,0);
+	border-right: 0.1rem solid rgba(0,0,0,0);
+	margin-left: 0.28rem;
+}
+.tri_g{
+	border:0.1rem solid #3ece91;
+	width: 0;
+	height: 0;
+	border-bottom: 0.1rem solid rgba(0,0,0,0);
+	border-left: 0.1rem solid rgba(0,0,0,0);
+	border-right: 0.1rem solid rgba(0,0,0,0);
+	margin-left: 0.28rem;
+}
+.des_map_asi{
+	top:0.94rem;
+	left:7.2rem;
+}
+.des_map_eur{
+	top:0.86rem;
+	left:5.1rem;
+}
+.des_map_afi{
+	top:3.05rem;
+	left:4.75rem;
+}
+/*三个字的公共样式*/
+.des-3{
+	width: 1rem;
+	height:0.62rem;
+	background: #fff;
+	position: absolute;
+	border-radius: 0.1rem;
+	line-height: 0.62rem;
+	text-align: center;
+}
+.des_l{
+	margin-left: 0.4rem;
+}
+.des_map_nth{
+	top:1.25rem;
+	left:1.35rem;
+}
+.des_map_ant{
+	top:5rem;
+	left:6.65rem;
+}
+.des_map_sou{
+	top:3.1rem;
+	left:2.45rem;
+}
+.des_map_aus{
+	top:3.15rem;
+	left:7.84rem;
+}
+/*wrap的内容*/
+.des_wrap{
+	width: 100%;
+	font-size: 0.4rem;
+	font-family: "微软雅黑";
+}
+/*热门其他目的地*/
+.des_addr{
+	width: 100%;
+	margin-left: 2%;
+	line-height: 1.3rem;
+	font-size: 0.35rem;
+	color:#333;
+	clear: both;
+}
+/*热门目的地列表*/
+.des_listpic{
+	width: 100%;
+}
+.des_listpic li{
+	width: 46%;
+	height:6.92rem;
+	float:left;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 2%;
+	position: relative;
+	border: 1px solid;
+	box-sizing: border-box;
+}
+.des_img2{
+	width: 100%;
+}
+.des_r{
+	position: absolute;
+	top:0.2rem;
+	right:0.3rem;
+	background: rgba(120,120,120,0.8);
+	color:#fff;
+	text-align: center;
+}
+.des_p1,.des_p3{
+	font-size: 0.7rem;
+	margin: 0.1rem 0;
+}
+.des_p2,.des_p4{
+	margin: 0.1rem 0;
+}
+.des_le{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	color:#fff;
+	box-sizing: border-box;
+	padding:0.1rem 0 0.1rem 0.3rem;
+	background: rgb(80,90,130);
+}
+.des_countrylist{
+	width: 100%;
+	overflow: hidden;
+}
+.des_countrylist li{
+	width: 46%;
+	height:1.5rem;
+	float:left;
+	background: #fff;
+	margin-left: 2%;
+	margin-right: 2%;
+	padding: 0.3rem;
+	box-sizing: border-box;
+	margin-bottom: 2px;
+}
+.desclick{
+    background: #3ece91;
+    color:#fff
+}
+
+
+
+
+
+
+
+
+
+
+
+

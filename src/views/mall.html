@@ -1,36 +1,22 @@
-<!DOCTYPE html>
-<html ng-app="poort">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link rel="stylesheet" type="text/css" href="../css/mall.css"/>
-		<title>穷游网</title>
-	</head>
-	<body>
-		<div ng-controller="mallCtrl">
-			<!--机票小菜单-->
-			<div class="mall_menu">
-				<a href="#" ng-repeat="mall in mallData" class="mall_menu_a">
-					<span class="mall_menu_span"><img ng-src="{{mall.img}}" class="mall_img"></span>
-					<p class="mall_menu_p">{{mall.word}}</p>
-				</a>
-			</div>
-			<!--banner-->
-			<div class="mall_banner">
-				<div class="mall_ba">
-					<img src="../images/tejia.jpg" class="mall_bannerimg"/>
-				</div>
-				<div class="mall_ba">
-					<img src="../images/miaosha.jpg" class="mall_baimg"/><img src="../images/miaosha.jpg" class="mall_baimg"/>
-				</div>
-			</div>
-			<!--end banner-->
-			<div class="mall_goods">
-				有好货
-			</div>
+<div ng-controller="mallCtrl">
+	<!--机票小菜单-->
+	<div class="mall_menu">
+		<a href="#" ng-repeat="mall in mallData" class="mall_menu_a">
+			<span class="mall_menu_span"><img ng-src="{{mall.img}}" class="mall_img"></span>
+			<p class="mall_menu_p">{{mall.word}}</p>
+		</a>
+	</div>
+	<!--banner-->
+	<div class="mall_banner">
+		<div class="mall_ba">
+			<img src="../images/tejia.jpg" class="mall_bannerimg"/>
 		</div>
-	</body>
-	<script src="../js/libs/angular.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/module/app.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/app/mallcontroller.js" type="text/javascript" charset="utf-8"></script>
-</html>
+		<div class="mall_ba">
+			<img src="../images/miaosha.jpg" class="mall_baimg"/><img src="../images/miaosha.jpg" class="mall_baimg"/>
+		</div>
+	</div>
+	<!--end banner-->
+	<div class="mall_goods">
+		有好货
+	</div>
+</div>

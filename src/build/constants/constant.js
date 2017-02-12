@@ -1,0 +1,1 @@
+define(["app"],function(t){return t.constant("baseUrl","http://localhost:4000/")});

@@ -1,0 +1,1 @@
+define(["app"],function(o){return o.controller("footer",["$scope",function(o){var n=1;o.footerckick=function(o){n=o},o.footerclass=function(o){return n==o?"a":""}}])});
