@@ -49,7 +49,7 @@
 				</ul>
 				<p class="des_addr">{{cnname}}其他目的地</p>
 				<ul class="des_countrylist">
-					<li ng-repeat="datades in desData | destinFilter:cnname:'country'">
+					<li ng-repeat="datades in desData | destinFilter:cnname:'country':'cnname'">
 						<p>{{datades.cnname}}</p>
 						<p>{{datades.enname}}</p>
 					</li>

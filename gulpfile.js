@@ -19,7 +19,7 @@ gulp.task("html",function(){
 	gulp.src("src/**/*.html").pipe(gulp.dest("dist"))
 })
 gulp.task("ys",function(){
-	return gulp.src("src/js/**/*.js")
+	return gulp.src("src/build/**/*.js")
 //	.pipe(uglify({preserveComments:'some'}))
 	.pipe(gulp.dest("dist/js"))
 })
