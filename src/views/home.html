@@ -1,0 +1,55 @@
+<!--轮播-->
+	<div class="swiper-container swiper-container-horizontal swiper-first" ng-controller="homeLunbo">
+		<div class="swiper-wrapper">
+		<img class="swiper-slide" ng-repeat="imgs in imgsrc"  ng-src="{{imgs}}"/>
+		</div>
+	</div>
+<!--轮播结束-->
+<a href="#">
+	<h3 class="home_h3">
+		<img src="images/dp.png"/>
+		<p>我去过的目的地帮助更多的穷游er</p>
+		<img src="images/enter.png"/>
+	</h3>
+</a>
+<div class="home_bgimg">
+	<a href="#" class="home_visit"><img src="images/dj.jpg" class="bgimg"/>
+	<div>
+		<p>最近访问</p>
+		<p>东京</p>
+	</div>
+	</a>
+	<ul class="home_nav">
+		<a href=""><li><img src="images/chwl.jpg"/>
+			<p>吃喝玩乐</p>
+		</li></a>
+		<a href=""><li><img src="images/ms.jpg"/>
+			<p>美食</p>
+		</li></a>
+		<a href=""><li><img src="images/jn.jpg"/>
+			<p>锦囊</p>
+		</li></a>
+		<a href=""><li><img src="images/mdd.jpg"/>
+			<p>收藏目的地</p>
+		</li></a>
+	</ul>
+	<span class="rel">更多城市</span>
+</div>
+<div class="home_city" ng-controller="homeCtry">
+	<p class="home_nav home_span">
+		<span>弗洛伦萨</span>
+		<span>巴厘岛</span>
+		<span>墨尔本</span>
+	</p>
+	<div class="home_go">
+		<img src="images/CM.png"/>
+		<p>现在出发</p>
+	</div>
+	<div class="citys">
+		<a ng-href="{{city.url}}" ng-repeat="city in homecity">
+		<img ng-src="{{city.cover}}"/>
+		<h4>{{city.title}}</h4>
+		<p>{{city.subject}}</p>
+	</a>
+	</div>
+</div>

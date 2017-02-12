@@ -1,0 +1,20 @@
+define(['app'],function(app){
+	return app.config(['$routeProvider',"$locationProvider",function($routeProvider,$locationProvider){
+			$locationProvider.html5Mode(false).hashPrefix('');//解决1.6的路由地址冲突问题
+			$routeProvider.when('/',{
+				templateUrl:'views/home.html'
+			})
+			.when('/destination',{
+				templateUrl:'views/destination.html'
+			})
+			.when("/BBS",{
+				templateUrl:'views/BBS.html'
+			})
+			.when("/mall",{
+				templateUrl:'views/mall.html'
+			})
+			.when("/mine",{
+				templateUrl:'views/mine.html'
+			})
+	}])
+})

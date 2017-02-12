@@ -1,0 +1,26 @@
+<div class="BBS1" ng-controller="BBS1Ctry">
+	<!--热议-->
+	<ul id="bbs_all_uls">		
+			<li class="bbs_home_detail" ng-repeat="datas in addproducts">
+				<img ng-src="{{datas.avatar}}" class="bbs_img"/>
+				<!--右边内容-->
+				<div class="bbs_detail_wrap">
+					
+					<p class="bbs_hot_author">{{datas.author}}</p>
+					<a href="#" class="bbs_hot_title">{{datas.title}}</a>
+					
+					<div class="bbs_mid_img">					
+							<img ng-repeat="imgsrc in datas.bigpic_arr" ng-src="{{imgsrc}}" class="bbs_hot_img"/>
+						
+					</div>				
+					<span class="bbs_forum">{{datas.forum}}</span>
+				   <span class="bbs_reply_time">{{datas.reply_time}}</span>
+				   <div class="bbs_num_wrap">
+						<div class="bbs_icon"></div>
+						<div class="bbs_icon_num">{{datas.reply_num}}</div>
+					</div>
+				</div>
+		</li>
+	</ul>
+	<!--热议结束-->
+</div>

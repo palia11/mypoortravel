@@ -1,0 +1,61 @@
+<div class="BBS3" ng-controller="BBS3Ctry">
+	<!--找旅伴-->
+	<!--出发时间 目的地-->
+<div>
+<ul class="bbs_find_sele" ng-class="ppClass()">
+		<li class="bbs_find_list">
+			<p class="sel_p" ng-click="timebolClick()" ng-class="ppfontClass(0)">
+				出发时间—{{goTime}}    ▼
+			</p>
+			<ul class="bbs_search_aeeow" ng-hide="timebol" ng-show="timebol == true">
+				<li ng-repeat="time in selData"   ng-click="timeClick(time.description)" ng-class="bbsClass(time.description)"><span class="bbs_over_span">{{time.description}}</span>&nbsp;</li>
+			</ul>
+		</li>
+		<li class="bbs_find_list" >
+			<p class="sel_p" ng-click="bolClick()" ng-class="ppfontClass(1)">
+				目的地—{{placeName}}    ▼
+			</p>
+			<div ng-hide='bol'>
+				<ul class="sel_continent">
+					<li ng-repeat="place in selData1" class="sel_li" ng-click="conClick(place.continent)" ng-class="conClass(place.continent)">{{place.continent}}</li>
+				</ul>
+				<ul class="sel_place_name">
+					<li ng-repeat="place1 in selData1 | destinFilter:conName:'place':'continent'" class="sel_li" ng-click="placeClick(place1.place_name)" ng-class="areaClass(place1.place_name)">{{place1.place_name}}
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</div>	
+	<!--获取找旅伴的数据-->
+	<ul class="bbs_all_ulist">		
+	      <li class="bbs_home_deta" ng-repeat="data in add2products">
+		<img ng-src="{{data.avatar}}" class="bbs_img"/>
+		
+		<!--右边内容-->
+		<div class="bbs_detail_wrap">
+			
+			<p class="bbs_hot_author">{{data.username}}</p>
+			<a href="#" class="bbs_hot_tit">{{data.title}}</a>
+			
+			<div class="bbs_mid_imgs">
+				<p class="bbs_mid_pho">
+				<span class="bbs_span_one"></span>
+				<span class="bbs_span_hide">{{data.start_time}}-{{data.end_time}}</span>
+				</p>
+				<p class="bbs_mid_pho">
+				<span class="bbs_span_two"></span>
+				<span class="bbs_span_hide">{{data.citys_str}}</span>
+				</p>
+			</div>				
+			<span class="bbs_forum_vv">{{data.views}}人浏览</span>
+		   <span class="bbs_reply_time">{{data.publish_time}}分钟前</span>
+		   <div class="bbs_num_wrap">
+			<div class="bbs_icon"></div>
+			<div class="bbs_icon_num">{{data.views}}</div>
+		</div>
+		</div>
+		</li>
+	</ul>
+<!--找旅伴结束-->
+</div>

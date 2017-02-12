@@ -1,2 +1,3 @@
-var app = angular.module('poort',[])
-.constant("baseUrl","http://localhost:4000/");
+define(['angular'],function(angular){
+	return angular.module("app",['ngRoute']);
+})

@@ -1,0 +1,1 @@
+define(["app"],function(e){return e.controller("homeCtry",["$scope","$http","baseUrl",function(e,t,n){t.get(n+"home").then(function(t){e.homecity=t.data.data.feed.entry})}])});

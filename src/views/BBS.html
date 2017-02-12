@@ -1,272 +1,31 @@
-<!DOCTYPE html>
-<html ng-app="poort">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />		
-		<title>穷游网</title>
-		<link rel="stylesheet" type="text/css" href="../css/bbs.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/mine.css"/>
-		
-	</head>
-	<body>
-		
-		<!--整体的控制器-->
-		<div  ng-controller="bbshotCtrl">
-		<!--头部-->
-		
-		<div id="bbs_header">
-			<ul id="bbs_ul">
-				<li>热议</li>
-				<li>进入面板</li>
-				<li>找旅伴</li>
-			</ul>
-			<!--搜索点击的图标-->
-			
-			<a ng-click="appearClick()">
-			</a>
-			
+<div id="BBS" ng-controller="BBSCtry">
+<div class="swiper-container swiper-container-horizontal swiper-scend">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<ng-include src="'views/BBS1.html'"></ng-include>
+			</div>
+			<div class="swiper-slide">
+				<ng-include src="'views/BBS2.html'"></ng-include>
+			</div>
+			<div class="swiper-slide">
+				<ng-include src="'views/BBS3.html'"></ng-include>
+			</div>
+		</div>
+		 <div class="swiper-pagination">
+		 </div>
+	</div>
+	<a ng-click="appearClick()" id="BBSsearch"></a>
+<!--搜索点击出现的界面-->
+	<div class="search" ng-class="back()" ng-click="backClick()">
+		<div class="search_header">
+			<div class="search_back"></div>
+			<input type="text" class="search_input" placeholder="搜索目的地、用户、帖子、折扣"/>
 		</div>
 		
-		<!--搜索点击出现的界面-->
-			<div class="search" ng-class="back()" ng-click="backClick()">
-			<div class="search_header">
-				<div class="search_back"></div>
-				<input type="text" class="search_input" placeholder="搜索目的地、用户、帖子、折扣"/>
-			</div>
-			
-			<ul class="search_list">
-				<p class="search_hot">热门搜索</p>
-				<li ng-repeat="count in seaData">{{count}}</li>
-			</ul>
-		</div>
-		<!--结束-->
-		
-		<!--热议-->
-		<ul id="bbs_all_uls">		
-		<li class="bbs_home_detail" ng-repeat="datas in addproducts">
-			<img ng-src="{{datas.avatar}}" class="bbs_img"/>
-			<!--右边内容-->
-			<div class="bbs_detail_wrap">
-				
-				<p class="bbs_hot_author">{{datas.author}}</p>
-				<a href="#" class="bbs_hot_title">{{datas.title}}</a>
-				
-				<div class="bbs_mid_img">					
-						<img ng-repeat="imgsrc in datas.bigpic_arr" ng-src="{{imgsrc}}" class="bbs_hot_img"/>
-					
-				</div>				
-				<span class="bbs_forum">{{datas.forum}}</span>
-			   <span class="bbs_reply_time">{{datas.reply_time}}</span>
-			   <div class="bbs_num_wrap">
-				<div class="bbs_icon"></div>
-				<div class="bbs_icon_num">{{datas.reply_num}}</div>
-			</div>
-			</div>
-			</li>
+		<ul class="search_list">
+			<p class="search_hot">热门搜索</p>
+			<li ng-repeat="count in seaData">{{count}}</li>
 		</ul>
-		<!--热议结束-->
-		
-		<!--进入面板-->
-		
-		
-		
-		
-		
-		
-		
-		<!--找旅伴-->
-		<div style="margin-top: 1.8rem;">
-			
-			<!--出发时间 目的地-->
-		<div ng-controller="timeCtrl">
-		<ul class="bbs_find_sele" ng-class="ppClass()">
-				<li class="bbs_find_list">
-					<p class="sel_p" ng-click="timebolClick()" ng-class="ppfontClass(0)">
-						出发时间—{{goTime}}    ▼
-					</p>
-					<ul class="bbs_search_aeeow" ng-hide="timebol" ng-show="timebol == true">
-						<li ng-repeat="time in selData"   ng-click="timeClick(time.description)" ng-class="bbsClass(time.description)"><span class="bbs_over_span">{{time.description}}</span>&nbsp;</li>
-					</ul>
-				</li>
-				<li class="bbs_find_list" >
-					<p class="sel_p" ng-click="bolClick()" ng-class="ppfontClass(1)">
-						目的地—{{placeName}}    ▼
-					</p>
-					<div ng-hide='bol'>
-						<ul class="sel_continent">
-							<li ng-repeat="place in selData1" class="sel_li" ng-click="conClick(place.continent)" ng-class="conClass(place.continent)">{{place.continent}}</li>
-						</ul>
-						<ul class="sel_place_name">
-							<li ng-repeat="place1 in selData1 | destinFilter:conName:'place':'continent'" class="sel_li" ng-click="placeClick(place1.place_name)" ng-class="areaClass(place1.place_name)">{{place1.place_name}}
-							</li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-	</div>	
-			<!--获取找旅伴的数据-->
-		<ul class="bbs_all_ulist">		
-			      <li class="bbs_home_deta" ng-repeat="data in add2products">
-				<img ng-src="{{data.avatar}}" class="bbs_img"/>
-				
-				<!--右边内容-->
-				<div class="bbs_detail_wrap">
-					
-					<p class="bbs_hot_author">{{data.username}}</p>
-					<a href="#" class="bbs_hot_tit">{{data.title}}</a>
-					
-					<div class="bbs_mid_imgs">
-						<p class="bbs_mid_pho">
-						<span class="bbs_span_one"></span>
-						<span class="bbs_span_hide">{{data.start_time}}-{{data.end_time}}</span>
-						</p>
-						<p class="bbs_mid_pho">
-						<span class="bbs_span_two"></span>
-						<span class="bbs_span_hide">{{data.citys_str}}</span>
-						</p>
-					</div>				
-					<span class="bbs_forum_vv">{{data.views}}人浏览</span>
-				   <span class="bbs_reply_time">{{data.publish_time}}分钟前</span>
-				   <div class="bbs_num_wrap">
-					<div class="bbs_icon"></div>
-					<div class="bbs_icon_num">{{data.views}}</div>
-				</div>
-				</div>
-				</li>
-			</ul>
-		</div>
-		<!--找旅伴结束-->
-		
-		
-		
-		
-		</div>
-		
-	</body>
-	<script src="../js/libs/angular.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/destinfilter.js" type="text/javascript" charset="utf-8"></script>
-	<script>
-
-		app.constant('baseUrl',"http://localhost:4000/")
-		 .controller('bbshotCtrl',['$scope','baseUrl','$http',function($scope,baseUrl,$http){
-		 	//获取热议数据
-		 	
-		 	$http.get(baseUrl + "bbsHot")
-				.then(function(data){
-					$scope.addproducts = data.data.data;
-//					 console.log($scope.addproducts)
-				},function(error){
-					$scope.error = error;
-		})
-				//找旅伴数据
-		 	$http.get(baseUrl + "bbsFind")
-				.then(function(data){
-					$scope.add2products = data.data.data;
-//					 console.log($scope.add2products)
-				},function(error){
-					$scope.error = error;
-		})
-				
-				//搜索界面的数据
-				
-				
-				$http.get(baseUrl + "bbsSearch")
-	      .then((data) => {
-	        	$scope.seaData = data.data.data;
-	      },(error) =>{
-	        console.log(error)
-	    });
-	    
-	    
-	    
-	    //点击搜索出现隐藏
-	     $scope.boll = true;
-	     $scope.appearClick = function(){
-	     	console.log(1)
-	    	$scope.boll = false;
-	    }
-	    $scope.backClick = function(){
-	    	$scope.boll = true;
-	    }
-	    $scope.back = function(){
-	    	return $scope.boll ? "searchback" : "";
-	    }
-		 }])
-		 
-		 .controller("timeCtrl",['$scope','baseUrl','$http',function($scope,baseUrl,$http){
-			$http.get(baseUrl + "bbsSelect")
-	      .then((data) => {
-	        	$scope.selData = data.data.data.times_range;
-	        	$scope.selData1 = data.data.data.destination;
-	        	console.log($scope.selData1);
-	      },(error) =>{
-	        console.log(error)
-	    });
-	    //出发时间
-	    $scope.goTime = '不限';
-	    $scope.timebol = true; //出发时间的ul隐藏
-	    $scope.bol=true; //目的地的ul隐藏
-	    //出发时间的ul-li的点击事件
-	    $scope.timeClick = function(time){
-	    	$scope.goTime = time; //把点击的li的时间绑定到p的时间
-	    	$scope.timebol = true; //绑定后出发时间的ul隐藏
-	    }
-	    //时间p的点击事件，判断是否隐藏
-	    $scope.timebolClick = function(){
-	    	$scope.timebol = ($scope.timebol == false?true:false); //点击之后，隐藏则显示，否则反之；
-	    	$scope.bol=true; //使目的地的ul隐藏
-	    }
-	    //给出发时间的ul-li点击添加样式
-	    $scope.bbsClass = function(time){
-	    	return $scope.goTime == time ? "bbsliclick" : ""; //绑定成功ul-li的颜色变绿
-	    }
-	    //目的地
-	   
-	    $scope.conName = "热门";  //默认
-	    //目的地左边ul-li的点击事件
-	    
-	    $scope.conClick = function(name){//点击更改要过滤的对象
-	    	$scope.conName = name;
-	    }
-	    //给左边的li修改样式
-	    $scope.conClass = function(name){
-	    	return $scope.conName == name?"sel_li_bg":"";
-	    }
-	    //目的地显示隐藏事件
-	    $scope.bolClick = function(){
-	    	 $scope.bol=false==$scope.bol?true:false;//显示时点击使其true隐藏
-	    	 $scope.timebol = true;//使时间的ul隐藏
-	    }
-	    //目的地p的地点与li中的地点绑定
-	    $scope.placeName = '不限';
-	    $scope.placeClick = function(name){
-	    	$scope.placeName = name;//目的地p的地点与li中的地点进行绑定
-	    	$scope.bol=true;//绑定成功后隐藏li
-	    }
-	    //右边地区的颜色样式
-	    $scope.areaClass = function(name){
-	    	return $scope.placeName == name?"sel_li_bg":""; //地点相符后使li的地点颜色变绿
-	    }
-	    //出发时间，目的地的背景样式
-	    $scope.ppClass = function(){
-	    	if($scope.timebol&&$scope.bol){//当出发时间的ul和目的地的ul都隐藏的时候背景色为白色
-	    		return ''
-	    	}else{
-	    		return "sel_pp"//为灰色
-	    	}
-	    }
-	    ////出发时间，目的地的字体样式
-	     $scope.ppfontClass = function(num){
-	     	//参数num来判断给出发时间(num=0)还是目的地(num=1)添加样式
-	     		if(!$scope.timebol){//出发时间的ul-li如果显示
-	     				return num==0?'sel_ppfont':'';//判断参数是否为0，为0则给出发时间p添加字体样式
-	     		}else if(!$scope.bol){//目的地ul-li如果显示
-	     			return num==1?'sel_ppfont':'';//判断参数是否为1，为1则给目的地p添加样式
-	     		}else{
-	     			return ''
-	     		}
-	    }
-		}])
-
-	</script>
-</html>
+	</div>
+<!--结束-->		
+</div>

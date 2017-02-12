@@ -1,0 +1,1 @@
+define(["app"],function(n){return n.controller("destinationCtry",["$scope","$http","baseUrl",function(n,t,e){t.get(e+"all").then(function(t){n.desData=t.data.data}),n.cnname="欧洲",n.desClick=function(t){n.cnname=t},n.desClass=function(t){return n.cnname==t?"desclick":""},n.desClass1=function(t){return n.cnname==t?"tri_g":""}}])});

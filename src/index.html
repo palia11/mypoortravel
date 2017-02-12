@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>穷游网</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/libs/require.js" data-main="js/main" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div ng-view></div>
+		<footer ng-controller="footer">
+			<ul>
+				<li><a href="#/" ng-click="footerckick(1)" ng-class="footerclass(1)"><span class="span1" ></span>
+					<p>首页</p>
+				</a></li>
+				<li><a href="#/destination" ng-click="footerckick(2)" ng-class="footerclass(2)"><span class="span2"></span>
+					<p>目的地</p>
+				</a></li>
+				<li><a href="#/mall" ng-click="footerckick(3)" ng-class="footerclass(3)"><span class="span3"></span>
+					<p>商城</p>
+				</a></li>
+				<li><a href="#/BBS" ng-click="footerckick(4)" ng-class="footerclass(4)"><span class="span4"></span>
+					<p>社区</p>
+				</a></li>
+				<li><a href="#/mine" ng-click="footerckick(5)" ng-class="footerclass(5)"><span class="span5"></span>
+					<p>我的</p>
+				</a></li>
+			</ul>
+		</footer>		
+	</body>
+</html>
