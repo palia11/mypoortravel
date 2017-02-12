@@ -1,0 +1,106 @@
+@charset "utf-8";
+#BBS{
+   .swiper-pagination{
+        position: fixed;
+        width: 100%;
+        top:0;
+        left: 0;
+        background: #12be76;
+        font-size: 0.5rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+    .swiper-wrapper{
+        margin-top: 2rem;
+    }
+    .swiper-scend{
+        .swiper-slide{
+            height: 100vh;
+            overflow: auto;
+        }
+    }
+    .swiper-pagination-bullet{
+        border-radius: 0;
+        width: 20%;
+        background:rgba(0,0,0,0);
+        color:#000;
+        opacity:1;
+    }
+    .swiper-pagination-bullet-active{
+        color:#fff;
+    }
+    #BBSsearch{
+        position: fixed;
+        top:0.7rem;
+        right: 0.5rem;
+        z-index: 101;
+        font-family: 'Glyphicons Halflings';
+        font-size: 0.6rem;
+        color:#fff;
+    }
+    #BBSsearch:before{
+        content: '\e003';
+    }
+    .search{
+        width: 100%;
+        margin-left: 100%;
+        top:0;
+        z-index: 102;  position: fixed;
+        transition: 1s linear;
+    }
+    .searchback{
+        margin-left: 0%;
+        transition: 1s linear; 
+    }
+    .search_header{
+        width: 100%;
+        background: #0fbf77;
+        height:2rem;
+        color: #000;
+        input{
+            width: 80%;
+            height:0.6rem;
+            float: left;
+            margin-left: 0.3rem;
+            margin-top: 0.5rem;
+            background: url(../images/search_icon2.jpg) no-repeat left center;
+            text-indent: 0.8rem;
+            color:#000;
+            font-size: 0.4rem;
+            line-height: 0.6rem;
+            border:none;
+            outline: none;
+            border-bottom: 0.01rem solid #50dea3;
+        }
+    }
+    .search_back{
+        width: 0.7rem;
+        height:0.7rem;
+        background: url(../images/back_icon.jpg) no-repeat center;
+        background-size: 100% 100%;
+        float:left;
+        margin-left: 0.5rem;
+        margin-top:0.39rem;
+    }
+    .search_list{
+        clear: both;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        overflow: auto;
+        
+    }
+    .search_list .search_hot{
+        font-size: 0.3rem;
+        line-height: 0.3rem;
+    }
+    .search_list li{
+        border-bottom: 0.01rem solid #e8e8e8;
+        color:#1b1b1b;
+        font-size: 0.4rem;
+        line-height: 1.5rem;
+    } 
+}    

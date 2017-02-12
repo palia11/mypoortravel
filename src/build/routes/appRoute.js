@@ -1,0 +1,1 @@
+define(["app"],function(e){return e.config(["$routeProvider","$locationProvider",function(e,t){t.html5Mode(!1).hashPrefix(""),e.when("/",{templateUrl:"views/home.html"}).when("/destination",{templateUrl:"views/destination.html"}).when("/BBS",{templateUrl:"views/BBS.html"}).when("/mall",{templateUrl:"views/mall.html"}).when("/mine",{templateUrl:"views/mine.html"})}])});

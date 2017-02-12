@@ -1,0 +1,93 @@
+@charset "utf-8";
+.BBS1{
+    #bbs_all_uls{
+        margin-top: 1.5rem;
+        padding-top: 0.1rem;
+        width: 100%;
+        /*display: none;*/
+        background: #eee;
+         /*border: 1px solid salmon;*/
+    }
+    .bbs_home_detail {
+        width: 100%;
+        background: white;
+        margin-top: 0.3rem;
+        box-shadow: 0 1px 5px #b7b7b7;
+        overflow: hidden;   
+        display: flex;
+        /*flex-wrap: wrap;*/
+    }
+    .bbs_img{
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;    
+        margin: 0.23rem 0 0 0.45rem;   
+    }
+    /*留言右边内容*/
+    .bbs_detail_wrap {   
+        width: 80%;
+        margin: 0.4rem 0 0.35rem 0.2rem;
+        position: relative;
+        
+    }
+    .bbs_hot_author {
+        font-size: 0.45rem;
+        color: #8b8b8b;
+        height: 0.45rem;
+        line-height: 0.45rem;
+        
+    }
+    .bbs_hot_title {
+        font-size: 0.45rem;
+        display: block;
+        margin: 0.1rem 0;
+        color: #232323;
+        line-height: 0.5rem;
+        font-weight: bold;
+    }
+    /*图片*/
+    .bbs_mid_img{
+        display: flex;
+    }
+    .bbs_hot_img {
+        width: 2.3rem;
+        height: 2.3rem;display: block;
+        margin: 0 0.44rem 0.1rem 0;
+    }
+    .bbs_forum {
+        font-size: 0.33rem;
+        color: #3ec693;
+        height: 0.5rem;
+        overflow: hidden;
+        width: 60%;
+    }
+    .bbs_reply_time {
+        right: 1.2rem;
+        bottom: 0.1rem;
+    }
+    .bbs_reply_time, .bbs_num_wrap {
+        font-size: 0.33rem;
+        color: #777777;
+        position: absolute;
+        line-height: 0.38rem;
+    }
+    .bbs_num_wrap {
+        display: inline-block;
+        right: 0.1rem;
+        /*bottom: 0.1rem;*/
+    }
+    .bbs_icon {
+        display: inline-block;
+        width: 0.37rem;
+        height: 0.35rem;margin-left: 0.1rem;
+        background: url(../images/reply.jpg) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .bbs_icon_num{
+        display: inline-block;
+        width: 0.37rem;
+        height: 0.3rem;
+        font-size: 0.35rem;
+        margin-left: 0.1rem;
+    }
+}
