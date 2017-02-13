@@ -16,5 +16,8 @@ define(['app'],function(app){
 			.when("/mine",{
 				templateUrl:'views/mine.html'
 			})
+			.when("/bell",{
+				templateUrl:'views/bell.html'
+			})
 	}])
 })

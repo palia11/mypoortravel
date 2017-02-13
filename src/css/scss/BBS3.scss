@@ -1,5 +1,6 @@
 @charset "utf-8";
 .BBS3{
+    
     font-size: 0.3rem;
         /*找旅伴*/
     /*找旅伴获取数据*/
@@ -160,6 +161,10 @@
         color:#0FBF77;
     }
     .sel_place_name{
+        height: 100vh;
+        padding-bottom: 5.23rem;
+        box-sizing: border-box;
+        overflow: auto;
         width: 100%;z-index: 100;
         background: #fff;
     }
