@@ -1,5 +1,6 @@
 @charset "utf-8";
 .BBS3{
+    
     font-size: 0.3rem;
         /*找旅伴*/
     /*找旅伴获取数据*/
@@ -63,7 +64,42 @@
         height: 0.88rem;overflow: hidden;
         display: flex;
     }
-    
+    .bbs3_bottom_per{
+       
+        display: flex;
+    }
+    .bbs_num_wrap_3 {
+        display:flex;
+        right: 0.7rem;
+        bottom: 0.2rem;
+        align-items: center;
+    }
+    .bbs_icon_3 {
+             
+        width: 0.37rem;
+        height: 0.35rem;margin-left: 0rem;
+       background: url(../images/dp.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .bbs_icon_num_3{
+       
+        width: 0.37rem;
+        height: 0.3rem;
+        font-size: 0.35rem;
+        margin-left: 0.1rem;
+        position: absolute;
+        bottom: 0rem;
+    }
+      .bbs_reply_time_3 {
+        right: 1.5rem;
+        bottom: 0.1rem;
+    }
+    .bbs_reply_time_3, .bbs_num_wrap_3 {
+        font-size: 0.33rem;
+        color: #777777; 
+        position: absolute;
+        line-height: 0.38rem;
+    }
     .bbs_forum_vv{
         font-size: 0.33rem;
         color: #4E4F4F;
@@ -163,6 +199,10 @@
         color:#0FBF77;
     }
     .sel_place_name{
+        height: 100vh;
+        padding-bottom: 5.23rem;
+        box-sizing: border-box;
+        overflow: auto;
         width: 100%;z-index: 100;
         background: #fff;
     }

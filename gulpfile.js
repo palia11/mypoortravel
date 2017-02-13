@@ -24,11 +24,11 @@ gulp.task("ys",function(){
 	.pipe(gulp.dest("dist/js"))
 })
 gulp.task("sass",function(){
-	return sass("src/**/*.scss",{style:"compact"})
+	return sass("src/scss/**/*.scss",{style:"compact"})
 	.on('error',function(err){
 		console.log(err.message)
 	})
-	.pipe(gulp.dest("dist/"))
+	.pipe(gulp.dest("dist/css"))
 })
 gulp.task("images",function(){
 	return gulp.src("src/images/**/*.{png,jpg,gif,svg}")

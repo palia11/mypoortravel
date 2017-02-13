@@ -86,18 +86,9 @@
         color: white;
     }
     /*bootstrap*/
-    .glyphicon {
-      position: relative;
-      top: 1px;
-      font-size: 0.35rem;
-      display: inline-block;
-      font-family: 'Glyphicons Halflings';
-      font-style: normal;
-      font-weight: normal;
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+
+    
+
     .aaa:before {
          content: "\e123";
     }
@@ -140,9 +131,7 @@
     .glyphicon-user:before {
         content: "\e008";
     }
-    .glyphicon-arrow-left:before {
-        content: "\e091";
-    }
+   
     /*收藏帖子*/
     .mine-nav{
         width: 100%;
@@ -198,6 +187,7 @@
     .mine-list:nth-child(3n+1) {
         margin-top: 0.5rem;
     }
+
     
     /*bell点击铃铛跳转到的页面*/
     /*头部消息*/
@@ -262,4 +252,6 @@
         height: 0;
         overflow: hidden;
     }
+
 }
+ 
