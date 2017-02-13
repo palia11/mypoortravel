@@ -8,7 +8,7 @@
         display: flex;
     }
     .bbs_all_ulist{
-        width: 100%;
+        width: 100%; margin-top: 1.23rem;
         /*display:none;*/
         background: #eee;
     }
@@ -64,7 +64,42 @@
         height: 0.88rem;overflow: hidden;
         display: flex;
     }
-    
+    .bbs3_bottom_per{
+       
+        display: flex;
+    }
+    .bbs_num_wrap_3 {
+        display:flex;
+        right: 0.7rem;
+        bottom: 0.2rem;
+        align-items: center;
+    }
+    .bbs_icon_3 {
+             
+        width: 0.37rem;
+        height: 0.35rem;margin-left: 0rem;
+       background: url(../images/dp.png) no-repeat center;
+        background-size: 100% 100%;
+    }
+    .bbs_icon_num_3{
+       
+        width: 0.37rem;
+        height: 0.3rem;
+        font-size: 0.35rem;
+        margin-left: 0.1rem;
+        position: absolute;
+        bottom: 0rem;
+    }
+      .bbs_reply_time_3 {
+        right: 1.5rem;
+        bottom: 0.1rem;
+    }
+    .bbs_reply_time_3, .bbs_num_wrap_3 {
+        font-size: 0.33rem;
+        color: #777777; 
+        position: absolute;
+        line-height: 0.38rem;
+    }
     .bbs_forum_vv{
         font-size: 0.33rem;
         color: #4E4F4F;
@@ -92,9 +127,11 @@
     /*找旅伴的目的地与出发时间*/
     .bbs_find_sele {
         width: 100%;
-        height: 1.23rem;
+        height: 1.23rem;position:fixed;
+       top:0;
         border-bottom: 1px solid #dcdcdc;    
-        display: flex;z-index: 100;
+        display: flex;
+        z-index: 100;
         color: #333 !important;
     }
     .bbs_find_list {
@@ -115,6 +152,7 @@
     }
     
     .bbs_search_aeeow {
+       
         width: 200%;
         background: #fff;
         z-index: 100;

@@ -63,7 +63,7 @@
     }
     .bbs_reply_time {
         right: 1.2rem;
-        bottom: 0.1rem;
+        bottom: 0.2rem;
     }
     .bbs_reply_time, .bbs_num_wrap {
         font-size: 0.33rem;
@@ -74,13 +74,13 @@
     .bbs_num_wrap {
         display: inline-block;
         right: 0.1rem;
-        /*bottom: 0.1rem;*/
+        bottom: 0.2rem;
     }
     .bbs_icon {
         display: inline-block;
         width: 0.37rem;
         height: 0.35rem;margin-left: 0.1rem;
-        background: url(../images/reply.jpg) no-repeat center;
+        background: url(../images/dp.png) no-repeat;
         background-size: 100% 100%;
     }
     .bbs_icon_num{
