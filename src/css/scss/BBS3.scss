@@ -7,11 +7,21 @@
         display: flex;
     }
     .bbs_all_ulist{
-        width: 100%;
+        width: 100%; margin-top: 1.23rem;
         /*display:none;*/
         background: #eee;
     }
-    
+    .bbs_imgbbs3{
+       
+        border-radius: 50%;    
+        margin: 0.23rem 0.33rem 0 0.15rem;   
+    }
+     .bbs_detail_wrapbbs3 {   
+        width: 90%;
+        margin: 0.4rem 0 0.35rem 0.2rem;
+        position: relative;
+        
+    }
     .bbs_home_deta {
         width: 100%;
         background: white;
@@ -22,8 +32,8 @@
         justify-content: flex-start;
         align-items: flex-start;
         img{
-            width: 2rem;
-            height: 2rem;
+            width: 1.3rem;
+            height: 1.2rem;
         }
     }
     
@@ -81,9 +91,11 @@
     /*找旅伴的目的地与出发时间*/
     .bbs_find_sele {
         width: 100%;
-        height: 1.23rem;
+        height: 1.23rem;position:fixed;
+       top:0;
         border-bottom: 1px solid #dcdcdc;    
-        display: flex;z-index: 100;
+        display: flex;
+        z-index: 100;
         color: #333 !important;
     }
     .bbs_find_list {
@@ -104,6 +116,7 @@
     }
     
     .bbs_search_aeeow {
+       
         width: 200%;
         background: #fff;
         z-index: 100;
