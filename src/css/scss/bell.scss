@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/*bell点击铃铛跳转的页面*/
+    /*头部消息*/
+#bell_header {
+  width: 100%;
+  height: 1.35rem;
+  background: #11BF79;
+  color: white;
+}
+.bell_a_color{
+    color: white;
+}
+#bell_header span{
+     font-size: 0.6rem;
+    line-height: 1.35rem;
+    margin-left: 0.5rem;
+}
+/*通知私信*/
+ .glyphicon-arrow-left:before {
+        content: "\e091";
+}
+#bell_nav {
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  background: lightgray;
+}
+.bell_nav {
+  width: 50%;
+  font-size: 0.35rem;
+  height: 1rem;
+  float: left;
+  text-align: center;
+  line-height: 1rem;
+}
+/*通知的下划线*/
+#bell_line {
+  width: 50%;
+  height: 0.15rem;
+  background: #11BF79 ;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+/*中间灰色有图片部分*/
+#bell_cont>div {
+  width: 100%;
+  position: absolute;
+  top: 2.35rem;
+  bottom: 0;
+}
+
+#bell_cont1 {
+    left: 0;
+    background: #EEEEEE;
+}
+#bell_cont img {
+    display: block;
+    width: 2.5rem;
+    margin: 0 auto;
+    text-align: center; 
+}
+.none{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

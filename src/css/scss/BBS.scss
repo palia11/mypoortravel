@@ -16,6 +16,8 @@
     .swiper-scend{
         .swiper-slide{
             height: 100vh;
+            padding-bottom: 4rem;
+            box-sizing: border-box;
             overflow: auto;
         }
     }

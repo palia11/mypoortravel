@@ -16,9 +16,9 @@
 	</div>
 	<a ng-click="appearClick()" id="BBSsearch"></a>
 <!--搜索点击出现的界面-->
-	<div class="search" ng-class="back()" ng-click="backClick()">
+	<div class="search" ng-class="back()" >
 		<div class="search_header">
-			<div class="search_back"></div>
+			<div class="search_back" ng-click="backClick()"></div>
 			<input type="text" class="search_input" placeholder="搜索目的地、用户、帖子、折扣"/>
 		</div>
 		

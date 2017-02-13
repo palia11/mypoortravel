@@ -7,7 +7,7 @@
 			<p class="sel_p" ng-click="timebolClick()" ng-class="ppfontClass(0)">
 				出发时间—{{goTime}}    ▼
 			</p>
-			<ul class="bbs_search_aeeow" ng-hide="timebol" ng-show="timebol == true">
+			<ul class="bbs_search_aeeow" ng-hide="timebol">
 				<li ng-repeat="time in selData"   ng-click="timeClick(time.description)" ng-class="bbsClass(time.description)"><span class="bbs_over_span">{{time.description}}</span>&nbsp;</li>
 			</ul>
 		</li>
@@ -28,7 +28,7 @@
 	</ul>
 </div>	
 	<!--获取找旅伴的数据-->
-	<ul class="bbs_all_ulist">		
+	<ul class="bbs_all_ulist" ng-show="timebol == bol">		
 	      <li class="bbs_home_deta" ng-repeat="data in add2products">
 		<img ng-src="{{data.avatar}}" class="bbs_imgbbs3"/>
 		
