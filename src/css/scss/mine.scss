@@ -81,7 +81,7 @@
     /*bell跳转*/
     .mine-a{
          position: absolute;
-         top: 0.5rem;
+         top: 0.1rem;
         right: 0.5rem;
         color: white;
     }
@@ -89,6 +89,7 @@
     .glyphicon {
       position: relative;
       top: 1px;
+      font-size: 0.35rem;
       display: inline-block;
       font-family: 'Glyphicons Halflings';
       font-style: normal;
