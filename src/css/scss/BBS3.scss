@@ -11,7 +11,17 @@
         /*display:none;*/
         background: #eee;
     }
-    
+    .bbs_imgbbs3{
+       
+        border-radius: 50%;    
+        margin: 0.23rem 0.33rem 0 0.15rem;   
+    }
+     .bbs_detail_wrapbbs3 {   
+        width: 90%;
+        margin: 0.4rem 0 0.35rem 0.2rem;
+        position: relative;
+        
+    }
     .bbs_home_deta {
         width: 100%;
         background: white;
@@ -22,8 +32,8 @@
         justify-content: flex-start;
         align-items: flex-start;
         img{
-            width: 2rem;
-            height: 2rem;
+            width: 1.3rem;
+            height: 1.2rem;
         }
     }
     
