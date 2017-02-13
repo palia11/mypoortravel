@@ -31,7 +31,7 @@ gulp.task("sass",function(){
 	.pipe(gulp.dest("dist/css"))
 })
 gulp.task("images",function(){
-	return gulp.src("src/images/**/*.{png,jpg,gif,svg}")
+	return gulp.src("src/images/**/*.{png,jpg,gif,svg,JPG}")
 //	 .pipe(imagemin({
 //	 	progressive:true,
 //	 	svgoPlugins:[{removeViewBox:false}],
